@@ -76,7 +76,7 @@ stepsperday<-summarise(group_by(activity,date),daily_steps=sum(steps,na.rm=TRUE)
 
 A histogram shows the frequency of a quantitative variable in a data set. Here, the figure below consists in a histogram of the daily steps made by the subject, broken into five 5,000-unit wide intervals.
 
-```{r histogram steps per day}
+```{r}
 hist(stepsperday$daily_steps, col='orange', xlab='Total daily steps', ylab='Number of days', main='Total number of steps taken each day')
 ```
 
@@ -105,7 +105,7 @@ stepsperinterval<-summarise(group_by(activity,interval_hours),interval_steps=mea
 
 Let us then prepare a time series plot to have a clearer view of the observed daily pattern.
 
-```{r time series plot}
+```{r}
 with(stepsperinterval,plot(x=interval_hours,y=interval_steps,type='l',main='Daily activity pattern',xlab='Time frame',ylab='Number of steps',col='darkgreen',xaxt='n'))
 axis(1,at=seq(0,2300,by=100),las=2)
 ```
@@ -177,7 +177,7 @@ stepsperday_new<-summarise(group_by(activity_new,date),daily_steps_new=sum(steps
 
 Here below is a histogram of the new daily steps values.
 
-```{r new histogram steps per day}
+```{r}
 hist(stepsperday_new$daily_steps_new, col='orange', xlab='Total daily steps', ylab='Number of days', main='Total number of steps taken each day')
 ```
 

@@ -155,7 +155,7 @@ A histogram shows the frequency of a quantitative variable in a data set. Here, 
 hist(stepsperday$daily_steps, col='orange', xlab='Total daily steps', ylab='Number of days', main='Total number of steps taken each day')
 ```
 
-![](PA1_template_files/figure-html/histogram steps per day-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 ### c. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -201,7 +201,7 @@ with(stepsperinterval,plot(x=interval_hours,y=interval_steps,type='l',main='Dail
 axis(1,at=seq(0,2300,by=100),las=2)
 ```
 
-![](PA1_template_files/figure-html/time series plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ### b. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -329,7 +329,7 @@ Here below is a histogram of the new daily steps values.
 hist(stepsperday_new$daily_steps_new, col='orange', xlab='Total daily steps', ylab='Number of days', main='Total number of steps taken each day')
 ```
 
-![](PA1_template_files/figure-html/new histogram steps per day-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 The mean and the median values are also recomputed.
 
@@ -410,7 +410,7 @@ The plot below represents the average number of steps per 5-minute interval, in 
 xyplot(interval_steps_new~as.integer(interval_hours) | week_status, data=stepsperinterval_new, layout=c(1,2), type='l', col='darkgreen', xlab='Time frame', ylab='Number of steps', main='Daily pattern - Weekend vs. Weekday')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 There is a difference in the daily activity pattern according to the day of the week. During weekdays, the activity begins earlier than during the weekend on average, and spikes in the morning, while the overall daily activity is smoothed over the whole day during weekends.
 The number of steps seems also higher during the weekends than during weekdays.  
