@@ -227,7 +227,7 @@ stepsperinterval_new<-summarise(group_by(activity_new,interval_hours,week_status
 
 The plot below represents the average number of steps per 5-minute interval, in two different panels (depending on if the steps have been made during a weekend or not).
 
-```{r plot weekday}
+```{r}
 xyplot(interval_steps_new~as.integer(interval_hours) | week_status, data=stepsperinterval_new, layout=c(1,2), type='l', col='darkgreen', xlab='Time frame', ylab='Number of steps', main='Daily pattern - Weekend vs. Weekday')
 ```
 
