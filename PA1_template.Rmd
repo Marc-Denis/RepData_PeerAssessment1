@@ -232,4 +232,4 @@ xyplot(interval_steps_new~as.integer(interval_hours) | week_status, data=stepspe
 ```
 
 There is a difference in the daily activity pattern according to the day of the week. During weekdays, the activity begins earlier than during the weekend on average, and spikes in the morning, while the overall daily activity is smoothed over the whole day during weekends.
-The number of steps seems also higher during the weekends than during weekdays.
+The number of steps seems also higher during the weekends than during weekdays.  

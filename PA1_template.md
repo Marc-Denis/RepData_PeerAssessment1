@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 Johns-Hopkins University - Coursera  
 Marc Denis - Week 2 Course Project
 
@@ -12,33 +17,6 @@ Let us begin by loading the required packages and configuring the parameters pro
 library(knitr)
 library(plyr)
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:plyr':
-## 
-##     arrange, count, desc, failwith, id, mutate, rename, summarise,
-##     summarize
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(lattice)
 library(grid)
 opts_knit$set(root.dir='C:/Users/denis/OneDrive/Documents/Coursera/Course 5-2/RepData_PeerAssessment1')
@@ -155,7 +133,7 @@ A histogram shows the frequency of a quantitative variable in a data set. Here, 
 hist(stepsperday$daily_steps, col='orange', xlab='Total daily steps', ylab='Number of days', main='Total number of steps taken each day')
 ```
 
-![](PA1_template_files/figure-html/histogram steps per day-1.png)<!-- -->
+![plot of chunk histogram steps per day](figure/histogram steps per day-1.png)
 
 ### c. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -201,7 +179,7 @@ with(stepsperinterval,plot(x=interval_hours,y=interval_steps,type='l',main='Dail
 axis(1,at=seq(0,2300,by=100),las=2)
 ```
 
-![](PA1_template_files/figure-html/time series plot-1.png)<!-- -->
+![plot of chunk time series plot](figure/time series plot-1.png)
 
 ### b. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -329,7 +307,7 @@ Here below is a histogram of the new daily steps values.
 hist(stepsperday_new$daily_steps_new, col='orange', xlab='Total daily steps', ylab='Number of days', main='Total number of steps taken each day')
 ```
 
-![](PA1_template_files/figure-html/new histogram steps per day-1.png)<!-- -->
+![plot of chunk new histogram steps per day](figure/new histogram steps per day-1.png)
 
 The mean and the median values are also recomputed.
 
@@ -352,7 +330,7 @@ median_stepsperday_new
 ## [1] 10766.19
 ```
 
-During the observation period, and if NA values have been filled with the average value observed during the corresponding interval, then on average the subject took 1.0766189\times 10^{4} steps. The new median number of steps performed is equal to 1.0766189\times 10^{4}.  
+During the observation period, and if NA values have been filled with the average value observed during the corresponding interval, then on average the subject took 1.0766189 &times; 10<sup>4</sup> steps. The new median number of steps performed is equal to 1.0766189 &times; 10<sup>4</sup>.  
 
 **Note to peer reviewers:** scientific notation has been automatically used here due to R internal settings displaying inline results with the scientific notation if the number to be displayed exceeds a certain threshold. Please refer to the results above for a classic decimal notation.
 
@@ -410,7 +388,7 @@ The plot below represents the average number of steps per 5-minute interval, in 
 xyplot(interval_steps_new~as.integer(interval_hours) | week_status, data=stepsperinterval_new, layout=c(1,2), type='l', col='darkgreen', xlab='Time frame', ylab='Number of steps', main='Daily pattern - Weekend vs. Weekday')
 ```
 
-![](PA1_template_files/figure-html/plot weekday-1.png)<!-- -->
+![plot of chunk plot weekday](figure/plot weekday-1.png)
 
 There is a difference in the daily activity pattern according to the day of the week. During weekdays, the activity begins earlier than during the weekend on average, and spikes in the morning, while the overall daily activity is smoothed over the whole day during weekends.
-The number of steps seems also higher during the weekends than during weekdays.
+The number of steps seems also higher during the weekends than during weekdays.  
